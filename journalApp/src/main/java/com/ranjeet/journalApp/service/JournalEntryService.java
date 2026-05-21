@@ -6,6 +6,7 @@ import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,7 +17,12 @@ public class JournalEntryService {
     private JournalEntryRepository JournalEntryRepository;
 
     public void saveEntry(JournalEntry JournalEntry){
-        JournalEntryRepository.save(JournalEntry);
+        try {
+            JournalEntry.setDate(LocalDateTime.now());
+            JournalEntryRepository.save(JournalEntry);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());;
+        }
     }
 
     public List<JournalEntry> getAll(){
