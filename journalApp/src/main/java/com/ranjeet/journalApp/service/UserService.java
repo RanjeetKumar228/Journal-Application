@@ -38,6 +38,3 @@ public class UserService {
         return userRepository.findByuserName(userName);
     }
 }
-
-
-// Controller ---> Service ---> Repository
