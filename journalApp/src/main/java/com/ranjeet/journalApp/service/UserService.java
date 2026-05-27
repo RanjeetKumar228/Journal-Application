@@ -1,14 +1,11 @@
 package com.ranjeet.journalApp.service;
 
-import com.ranjeet.journalApp.entity.JournalEntry;
 import com.ranjeet.journalApp.entity.User;
-import com.ranjeet.journalApp.repositroy.JournalEntryRepository;
 import com.ranjeet.journalApp.repositroy.UserRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
